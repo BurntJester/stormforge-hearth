@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Stormforge Hearth</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --forest-green: #3b5e45;
+            --soft-green: #a9c6b3;
+            --charcoal: #2b2b2b;
+            --white: #ffffff;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: var(--soft-green);
+            color: var(--charcoal);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            margin-top: 0;
+            line-height: 1.2;
+            color: var(--charcoal);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header Section (Sticky) */
+        header {
+            background-color: var(--forest-green);
+            padding: 1rem 0;
+            border-bottom: 4px solid var(--soft-green);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+        }
+
+        .hearth-logo {
+            height: 40px;
+            width: auto;
+        }
+
+        .header-title {
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .header-nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.2s ease;
+        }
+
+        .header-nav a:hover {
+            color: var(--soft-green);
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+            border-bottom: 1px solid #dcd7d4;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--forest-green);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 700px;
+            margin: 0 auto;
+            color: #4a4a4a;
+        }
+
+        /* Main Content Grid */
+        .about-content {
+            padding: 5rem 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-text h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--);
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            color: var(--charcoal);
+        }
+
+        .philosophy-card {
+            background-color: var(--white);
+            padding: 3rem;
+            border-radius: 24px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            border-top: 4px solid var(--forest-green);
+        }
+
+        .philosophy-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--forest-green);
+        }
+
+        /* Bio Section */
+        .bio-section {
+            background-color: var(--forest-green);
+            color: var(--white);
+            padding: 5rem 0;
+        }
+
+        .bio-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .bio-container h2 {
+            color: var(--white);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .bio-container p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+
+        /* Call to Action */
+        .cta {
+            padding: 5rem 0;
+            text-align: center;
+            background-color: var(--white);
+            color: var(--charcoal);
+        }
+
+        .cta h2 {
+            color: var(--forest-green);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--forest-green);
+            color: var(--white);
+            padding: 1.5rem 4rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 24px;
+            margin-top: 1.5rem;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #2c4734;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .header-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="header-brand">
+                <img src="image_0.png" alt="Stormforge Industries Logo" class="hearth-logo">
+                <h1 class="header-title">Stormforge Hearth</h1>
+            </a>
+            <nav class="header-nav">
+                <a href="index.html">Home</a>
+                <a href="mailto:advice@stormforge.industries">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>A Personal Advocate in Your Corner</h1>
+            <p>We provide a safe, confidential environment to investigate the facts and advocate for your wellbeing during complex life transitions and institutional disputes.</p>
+        </div>
+    </section>
+
+    <section class="about-content container">
+        <div class="about-grid">
+            <div class="about-text">
+                <h2>Demystifying the System</h2>
+                <p>Stormforge Hearth was founded to bridge the gap between everyday individuals and the rigid, often overwhelming bureaucracies they are forced to navigate. When dealing with things like school boards, government agencies, or difficult employers, the system is rarely designed to help you understand your rights.</p>
+                <p>We operate as your dedicated advocate and strategist. We listen to you, investigate the facts, outline your options clearly, and work alongside you to find a resolution that protects your interests and restores your peace of mind.</p>
+            </div>
+
+            <div class="philosophy-card">
+                <h3>Our Wellbeing Approach</h3>
+                <p>We do not rely on generic advice. Our methodology is rooted in professional advice, thoughtful investigation, and ethical advocacy. We look at the entirety of your situation, understanding exactly how the world is affecting you on a personal level.</p>
+                <p>By isolating the root causes of the conflict, we can build a structured, holistic path forward that empowers you to take back control.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bio-section">
+        <div class="bio-container">
+            <h2>About the Founder</h2>
+            <p>Izak Tait built Stormforge Hearth to bring the rigorous advocacy and professional advice usually reserved for large organisations directly to individuals who need it most. With a background in ethics and investigations, and extensive experience navigating dense government bureaucracies, he knows exactly how to help you navigate complex systems.</p>
+            <p>Whether you require an advocate to work alongside you to resolve a dispute, or a quiet space to seek holistic guidance, Izak provides confidentiality, clarity, and a fiercely protective approach to your wellbeing.</p>
+            <div style="margin-top: 2rem; display: flex; justify-content: center; align-items: center; gap: 0.5rem;">
+                <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; fill: var(--white);" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                <a href="https://www.linkedin.com/in/izak-tait/" target="_blank" rel="noopener noreferrer" style="color: var(--white); font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s ease;" onmouseover="this.style.borderBottom='1px solid var(--white)'" onmouseout="this.style.borderBottom='1px solid transparent'">
+                    Connect with Izak on LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>You do not have to navigate this alone.</h2>
+            <p style="color: #666; margin-bottom: 2rem;">Reach out for a completely confidential conversation about how we can help.</p>
+            <a href="mailto:hearth@stormforge.industries" class="btn">Book a free chat</a>
+        </div>
+    </section>
+
+</body>
+</html>
